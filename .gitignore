@@ -34,3 +34,4 @@ build/
 # Env
 .env
 .env.local
+CLAUDE.md
