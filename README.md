@@ -4,7 +4,7 @@
 >
 > 目标：构建一套 **持久化、严谨、相互关联** 的知识体系，把碎片化的问题转化为结构化的、可追溯、可复用的知识。
 >
-> 内容覆盖：**软件工程系统分析与设计 · 机器学习 · 深度学习 · 计算机视觉 · 分布式系统 · 数据库 · 并行计算 · 云计算安全 · Docker · LLM · Agent 开发 · 基础设施 · 408 考研**。
+> 内容覆盖：**软件工程系统分析与设计 · 机器学习 · 深度学习 · 计算机视觉 · 分布式系统 · 数据库 · 并行计算 · 云计算安全 · Docker · 前沿部署 · LLM · Agent 开发 · 基础设施 · 408 考研**。
 
 ---
 
@@ -51,6 +51,7 @@ software-engineering/
 │
 ├── 并行计算/                          # ✅ 已建：10章 (OpenMP/MPI/CUDA/分布式DL)
 ├── Docker/                            # ✅ 已建：26章 (含供应链安全/故障复盘)
+├── 前沿部署/                          # ✅ 已建：26章 (LLM服务化/Serverless边缘/渐进式交付/下一代基础设施/工业实战)
 ├── 408/                               # ✅ 已建：4科全套 + 附录
 ├── 408-code/                          # ✅ 已建：32模块 C++ 代码库 (含 mini-ISA)
 │
@@ -170,19 +171,34 @@ software-engineering/
 - **大厂视角**：阿里、字节、Netflix、Google 流水线
 - **故障复盘** + **成本规划**
 
-### 10. LLM ⏳
+### 10. 前沿部署 ✅
+
+> 详见 [./前沿部署/README.md](./前沿部署/README.md)
+
+26 章覆盖前沿部署全谱系，8 部分结构：
+
+- **范式与原则** (Ch 01-02)：部署演进、核心矛盾（延迟/吞吐/成本/可靠性/弹性）
+- **LLM 服务化** (Ch 03-09)：vLLM/TGI/SGLang/TensorRT-LLM、KV Cache 与 PagedAttention、continuous batching、量化（FP8/INT8/INT4）、TP/PP/EP/PD 分离、多模态、Agent 沙箱
+- **Serverless/边缘** (Ch 10-13)：Serverless GPU、冷启动优化、边缘 AI、端云协同
+- **渐进式交付** (Ch 14-16)：GitOps (ArgoCD/Flux)、Canary/Blue-Green/Shadow、特征开关与 A/B 实验
+- **下一代基础设施** (Ch 17-20)：MicroVM (Firecracker/gVisor/Kata)、WASM (WASI/Spin)、eBPF (Cilium/Tetragon)、Sidecarless Mesh (Istio Ambient/Cilium Mesh/Linkerd2)
+- **多地域与可靠性** (Ch 21-22)：多活 (LDC/Dorado/CRDT)、混沌工程 (ChaosMesh/Gremlin)
+- **工业实战** (Ch 23-26)：OpenAI/Anthropic/DeepSeek/阿里/字节部署案例、Character.AI/Midjourney/Suno/Cursor 平台架构、17 个故障复盘、成本与容量规划
+- **13 节统一结构**：思维导图 / 原理 / 代码 / 工业案例 / 故障复盘 / 面试
+
+### 11. LLM ⏳
 
 规划：预训练 / SFT / RLHF / DPO、上下文工程、RAG、长上下文、推理加速、Agent 协议。
 
-### 11. Agent 开发 ⏳
+### 12. Agent 开发 ⏳
 
 规划：ReAct / Plan-and-Execute / Reflexion、工具调用、MCP、多 Agent 协作、评估。
 
-### 12. infra开发 ⏳
+### 13. infra开发 ⏳
 
 规划：网关、服务网格、可观测性、CI/CD、IaC、容器与编排。
 
-### 13. 408 ✅
+### 14. 408 ✅
 
 > 详见 [./408/README.md](./408/README.md) 与 [./408-code/README.md](./408-code/README.md)
 
@@ -289,6 +305,7 @@ cd software-engineering
 - [x] 并行计算（10 章：OpenMP / MPI / CUDA / 分布式 DL）
 - [x] 云计算安全（23 章 + 五云对照 + 18 工业案例）
 - [x] Docker（26 章：含供应链安全 / 故障复盘 / 成本规划）
+- [x] 前沿部署（26 章：LLM 服务化 / Serverless 边缘 / 渐进式交付 / 下一代基础设施 / 多地域 / 工业实战 / 成本规划）
 - [x] 408 笔记全套（4 科深度扩充 + 附录）
 - [x] 408-code（32 模块 C++ 代码库 + mini-ISA 汇编模拟器）
 - [ ] 机器学习 - 进阶专题（RL / GNN / 推荐 / 迁移 / 元 / 联邦）
